@@ -19,7 +19,6 @@ class App extends Component {
   }
   render() {
     const { spaceData, error, isLoading } = this.state;
-    console.log(spaceData)
     return (
       <main className='App'>
         <h1>Spacestagram</h1>
