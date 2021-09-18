@@ -18,7 +18,15 @@ class App extends Component {
     fetchMarsData()
       .then(data => this.setState({ spaceData:data.photos, isLoading: false }))
   }
-  
+
+  handleClick = (id) => {
+    console.log(id)
+return
+  }
+
+
+
+
   render() {
     const { spaceData, error, isLoading } = this.state;
     return (
@@ -27,8 +35,9 @@ class App extends Component {
         <h2 className='subheader'>Brought to you by NASA's image API</h2>
         {isLoading && <p className='loading-page'> Please hold, gathering data </p>}
         {error && <p className='error-page'> Sorry, can't access space rn. Please come back later</p>}
-          <Images id='images'
+        <Images id='images'
           images={spaceData}
+          handleClick={ this.handleClick }
         />
       </main>
     )

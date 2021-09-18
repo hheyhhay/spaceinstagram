@@ -1,7 +1,7 @@
 import React from 'react';
 import './Images.css';
 
-const Images = ( { images } ) => {
+const Images = ( { images, handleClick } ) => {
 
   const imageCards = images.map(image => {
     return (
@@ -9,7 +9,10 @@ const Images = ( { images } ) => {
         <img className='space-image'  src={image['img_src']} alt={`Landing of ${image.rover['name']} on Mars`}/>
         <h3 className='camera-name'>{image.rover['name']} Rover - {image.camera['full_name']}</h3>
         <h2 className='capture-date'>{ image['earth_date'] }</h2>
-        <button className='like-button'>Like</button>
+        <button
+          className='like-button'
+          onClick={() => handleClick(9 ) }
+        >Like</button>
       </div>
     )
   })
