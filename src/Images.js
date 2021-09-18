@@ -5,7 +5,12 @@ const Images = ( { images } ) => {
 
   const imageCards = images.map(image => {
     return (
-      <img className='space-image' key={image['id']} src={image['img_src']} />
+      <div className='image-card' key={image['id']}>
+        <img className='space-image'  src={image['img_src']} />
+        <h3 className='camera-name'>{image.rover['name']} Rover - {image.camera['full_name']}</h3>
+        <h2 className='capture-date'>{ image['earth_date'] }</h2>
+        <button>Like</button>
+      </div>
     )
   })
   return (
@@ -17,3 +22,8 @@ const Images = ( { images } ) => {
 }
 
 export default Images;
+
+
+//Curiousity rover - Front Havard Avoidance Camera
+//2021 - 09-01
+//like
