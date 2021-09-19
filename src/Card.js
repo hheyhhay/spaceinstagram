@@ -1,7 +1,19 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ( {id, image, name, cameraName, date, handleClick }) => {
+// class Card extends Component {
+//   constructor(props) {
+//     super(props);
+//       this.state = {
+//         isFavorite: false
+//       }
+//     }
+//   // console.log(props)
+//   return ( console.log(props))
+// }
+
+
+const Card = ( {id, image, name, cameraName, date, favorited, handleClick }) => {
 return (
   <div className='image-card' key={ id }>
     <img className='space-image'  src={ image } alt={`Landing of ${ name } on Mars`}/>
@@ -9,7 +21,7 @@ return (
     <h2 className='capture-date'>{ date }</h2>
     <button
       className='like-button'
-      onClick={() => handleClick( {id} ) }
+      onClick={() => handleClick( id ) }
     >Like</button>
   </div>
   )

@@ -9,10 +9,22 @@ class App extends Component {
     super();
       this.state= {
         spaceData: [],
+        savedFavorites: [],
         error: '',
         isLoading: false
       }
   }
+  // function App() {
+  //   const [spaceData, setSpaceData] = useState([])
+  //   const [error, setError] = useState('');
+  //   const [isLoading, setIsLoading ] = useState(false)
+  //
+  //   useEffect(() => {
+  //     const getData = fetchMarsData()
+  //     setStateData(getData.photos)
+  //
+  //   }
+  // }
   componentDidMount = () => {
     this.setState({ isLoading: true})
     fetchMarsData()
@@ -20,15 +32,25 @@ class App extends Component {
   }
 
   handleClick = (id) => {
-    console.log(id)
-return
+    // console.log(this.props)
+    // console.log(this.state)
+    const favoriteImage = this.state.spaceData.find(image => image.id === id)
+    const filteredData = this.state.spaceData.filter(image => image.id !== id)
+
+    this.setState({ spaceData: filteredData})
+
+    if (!this.state.savedFavorites) {
+      this.setState({ savedFavorites:[favoriteImage]})
+    } else {
+      this.setState({ savedFavorites:[...this.state.savedFavorites, favoriteImage]})
+    }
   }
 
 
 
 
   render() {
-    const { spaceData, error, isLoading } = this.state;
+    const { spaceData, savedFavorites, error, isLoading } = this.state;
     return (
       <main className='App'>
         <h1 className='header'>Spacestagram</h1>
@@ -37,6 +59,7 @@ return
         {error && <p className='error-page'> Sorry, can't access space rn. Please come back later</p>}
         <Images id='images'
           images={spaceData}
+          favorites={ savedFavorites }
           handleClick={ this.handleClick }
         />
       </main>
