@@ -1,20 +1,21 @@
 import React from 'react';
 import './Images.css';
+import Card from './Card';
 
 const Images = ( { images, handleClick } ) => {
 
   const imageCards = images.map(image => {
     return (
-      <div className='image-card' key={image['id']}>
-        <img className='space-image'  src={image['img_src']} alt={`Landing of ${image.rover['name']} on Mars`}/>
-        <h3 className='camera-name'>{image.rover['name']} Rover - {image.camera['full_name']}</h3>
-        <h2 className='capture-date'>{ image['earth_date'] }</h2>
-        <button
-          className='like-button'
-          onClick={() => handleClick(9 ) }
-        >Like</button>
-      </div>
+      <Card
+        id={image['id']}
+        image={image['img_src']}
+        name={image.rover['name']}
+        cameraName={image.rover['full_name']}
+        date={ image['earth_date']}
+        handleClick={handleClick}
+      />
     )
+
   })
 
   return (
