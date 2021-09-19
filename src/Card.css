@@ -55,41 +55,7 @@
   position: relative;
   transition-duration: 0.4s;
 }
+
 .like-button:hover {
   background: #C4CDD5;
-
-}
-@media only screen and (min-width: 500px) {
-  .image-container {
-    display: grid;
-    grid-template: 45% 45%;
-    grid-template-columns: repeat(2, 46%);
-    /* grid-template-rows: repeat(2, 45%); */
-    margin-left: auto;
-    margin-right: auto;
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
-    /* width: 90%;
-    height: 100%; */
-   }
-  /* .image-card {
-    border: 5px solid pink;
-  }  */
-}
-@media only screen and (min-width: 768px) {
-  .image-container {
-    display: grid;
-    grid-template: 45% 45%;
-    grid-template-columns: repeat(4, 23%);
-    /* grid-template-rows: repeat(2, 45%); */
-    margin-left: auto;
-    margin-right: auto;
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
-    /* width: 90%;
-    height: 100%; */
-  }
-/* .image-card {
-  border: 5px solid green;
-} */
 }
