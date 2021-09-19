@@ -1,19 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Card.css';
 
-// class Card extends Component {
-//   constructor(props) {
-//     super(props);
-//       this.state = {
-//         isFavorite: false
-//       }
-//     }
-//   // console.log(props)
-//   return ( console.log(props))
-// }
-
-
-const Card = ( {id, image, name, cameraName, date, favorited, handleClick }) => {
+const Card = ( {id, image, name, cameraName, date } ) => {
+  const [isFavorite, setIsFavorite] = useState(false)
 return (
   <div className='image-card' key={ id }>
     <img className='space-image'  src={ image } alt={`Landing of ${ name } on Mars`}/>
@@ -21,8 +10,8 @@ return (
     <h2 className='capture-date'>{ date }</h2>
     <button
       className='like-button'
-      onClick={() => handleClick( id ) }
-    >Like</button>
+      onClick={() => setIsFavorite(!isFavorite) }
+    >{isFavorite ? 'Liked!' : 'Like'}</button>
   </div>
   )
 }
