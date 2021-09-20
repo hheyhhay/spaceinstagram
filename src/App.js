@@ -1,47 +1,41 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { fetchMarsData } from './apiCalls'
-import Images from './Images'
+import Images from './Images';
+import { simplifyData } from './util';
 
+const App = () => {
+    const [spaceData, setSpaceData] = useState([])
+    const [error, setError] = useState('');
+    const [isLoading, setIsLoading ] = useState(true)
 
-class App extends Component {
-  constructor() {
-    super();
-      this.state= {
-        spaceData: [],
-        error: '',
-        isLoading: false
+    const getData = async () => {
+      try {
+        const data = await fetchMarsData()
+        const filteredData = simplifyData(data.photos)
+        setSpaceData(filteredData)
+        setIsLoading(false)
       }
-  }
-  componentDidMount = () => {
-    this.setState({ isLoading: true})
-    fetchMarsData()
-      .then(data => this.setState({ spaceData:data.photos, isLoading: false }))
-  }
+      catch (error) {
+        setError(error.message)
+      }
+    }
 
-  handleClick = (id) => {
-    console.log(id)
-return
-  }
+    useEffect( () => {
+      getData()
+    }, [] )
 
-
-
-
-  render() {
-    const { spaceData, error, isLoading } = this.state;
     return (
       <main className='App'>
         <h1 className='header'>Spacestagram</h1>
         <h2 className='subheader'>Brought to you by NASA's image API</h2>
-        {isLoading && <p className='loading-page'> Please hold, gathering data </p>}
-        {error && <p className='error-page'> Sorry, can't access space rn. Please come back later</p>}
+        { isLoading && <p className='loading-page'> Please hold, gathering data </p> }
+        { error && <p className='error-page'>{ error }</p> }
         <Images id='images'
-          images={spaceData}
-          handleClick={ this.handleClick }
+          images={ spaceData }
         />
       </main>
     )
-  }
 }
 
 export default App;
