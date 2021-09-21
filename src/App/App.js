@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { fetchMarsData } from './apiCalls'
-import Images from './Images';
-import { simplifyData } from './util';
+import { fetchMarsData } from '../util/apiCalls';
+import Images from '../Images/Images';
+import Loader from '../Loader/Loader';
+import { simplifyData } from '../util/util';
 
 const App = () => {
     const [spaceData, setSpaceData] = useState([])
@@ -29,7 +30,7 @@ const App = () => {
       <main className='App'>
         <h1 className='header'>Spacestagram</h1>
         <h2 className='subheader'>Brought to you by NASA's image API</h2>
-        { isLoading && <p className='loading-page'> Please hold, gathering data </p> }
+        { isLoading && <Loader /> }
         { error && <p className='error-page'>{ error }</p> }
         <Images id='images'
           images={ spaceData }
