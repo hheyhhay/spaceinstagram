@@ -16,18 +16,39 @@ _Shopify Challenge for Winter Frontend Internship_
   - [Project Specs](#project-specs)
 
 ## Abstract
-
+	
+This application was built for the Shopify Front End Developer Intern Challenge. This application uses the data from the NASA's APIs of Mars Rover Photos. Each photo displays a descriptive data of the camera name and the date it was captured. The user is able to like and unlike each photo. 
   
 
 ## Technologies
   - React
   - HTML5/CSS
   - Atom Text Editor
-	- API 
+  - API
+  - Cypress
 
 
 ## Code Architecture
 
+  - __src__
+     - __App__
+       - [App.css](src/App/App.css)
+       - [App.js](src/App/App.js)
+       - [App.test.js](src/App/App.test.js)
+     - __Card__
+       - [Card.css](src/Card/Card.css)
+       - [Card.js](src/Card/Card.js)
+     - __Images__
+       - [Images.css](src/Images/Images.css)
+       - [Images.js](src/Images/Images.js)
+     - __Loader__
+       - [Loader.css](src/Loader/Loader.css)
+       - [Loader.js](src/Loader/Loader.js)
+     - [index.css](src/index.css)
+     - [index.js](src/index.js)
+     - __util__
+       - [apiCalls.js](src/util/apiCalls.js)
+       - [util.js](src/util/util.js)
 
 ## Illustrations
 
@@ -35,7 +56,7 @@ Use https://gifcap.dev/ to make GIFs
 
 
 ## Install + Setup
-- Please see the deployed site (here)[https://spaceinstagram.surge.sh/]
+- Please see the deployed site [here](https://spacestagram.surge.sh/)
 
 To view the code: 
 - Clone down the Repository
