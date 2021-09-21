@@ -1,5 +1,3 @@
-
-
 # Spaceinstagram
 _Shopify Challenge for Winter Frontend Internship_
 
@@ -11,8 +9,6 @@ _Shopify Challenge for Winter Frontend Internship_
   - [Illustrations](#illustrations)
   - [Install + Setup](#set-up)
   - [Contributors](#contributors)
-	- [Wins](#wins)
-	- [Challenges + Improvements](#challenges-+-Improvements)
   - [Project Specs](#project-specs)
 
 ## Abstract
@@ -52,7 +48,7 @@ This application was built for the Shopify Front End Developer Intern Challenge.
 
 ## Illustrations
 
-Use https://gifcap.dev/ to make GIFs
+![spacestagram](https://user-images.githubusercontent.com/78764587/134203480-2e612711-d23d-4aa1-8026-70fedf5c3375.gif)
 
 
 ## Install + Setup
@@ -70,15 +66,6 @@ To view the code:
 ## Contributors
   - [Hayley Dixon](https://github.com/hheyhhay)
 
-## Wins
-	- What went well!
-	- Successes
-
-## Challenges + Improvements
-	- What was difficult & how you would like to improve on code/project
-	- Any Bugs
-	- Future Iterations
-
 
 ## Project Specs
-  - The project spec & rubric can be found [here](insert project spec sheet here)
+  - The project spec can be found [here](https://docs.google.com/document/d/1QlC6htA5SXEl3YruAOkJWj2-0W3w-n0UOzGuJ1EcktQ/edit#)
