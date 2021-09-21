@@ -8,6 +8,7 @@ _Shopify Challenge for Winter Frontend Internship_
   - [Code Architecture](#code-architecture)
   - [Illustrations](#illustrations)
   - [Install + Setup](#set-up)
+  - [Features](#features)
   - [Contributors](#contributors)
   - [Project Specs](#project-specs)
 
@@ -62,6 +63,10 @@ To view the code:
 - webpage will open in seperate browser
 
 ## Features
+
+- User can like or unlike an image
+- Loading Screen shows as site is fetching data
+- 100% accessibility report on Lighthouse
 
 ## Contributors
   - [Hayley Dixon](https://github.com/hheyhhay)
