@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Images.css';
-import Card from './Card';
+import Card from '../Card/Card';
 
 const Images = ( { images} ) => {
 
@@ -19,7 +19,7 @@ const Images = ( { images} ) => {
 
   return (
     <div className='image-display'>
-      {imageCards.length > 0 && <div className='image-container'>
+      {imageCards.length && <div className='image-container'>
       { imageCards }
       </div> }
     </div>
