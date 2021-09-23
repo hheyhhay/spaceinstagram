@@ -1,4 +1,4 @@
-# Spacenstagram
+# Spacestagram
 _Shopify Challenge for Winter Frontend Internship. Spacestagram(https://spacestagram.surge.sh/)_
 
 
