@@ -1,5 +1,5 @@
 # Spacestagram
-_Shopify Challenge for Winter Frontend Internship. Spacestagram(https://spacestagram.surge.sh/)_
+_Shopify Challenge for Winter Frontend Internship. [Spacestagram](https://spacestagram.surge.sh/)_
 
 
 ## Table of Contents
