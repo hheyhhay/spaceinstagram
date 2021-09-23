@@ -1,5 +1,5 @@
-# Spaceinstagram
-_Shopify Challenge for Winter Frontend Internship_
+# Spacenstagram
+_Shopify Challenge for Winter Frontend Internship. Spacestagram(https://spacestagram.surge.sh/)_
 
 
 ## Table of Contents
@@ -18,11 +18,7 @@ This application was built for the Shopify Front End Developer Intern Challenge.
   
 
 ## Technologies
-  - React
-  - HTML5/CSS
-  - Atom Text Editor
-  - API
-  - Cypress
+ React | HTML5 | CSS | Atom Text Editor| NASA API | Cypress
 
 
 ## Code Architecture
@@ -53,7 +49,7 @@ This application was built for the Shopify Front End Developer Intern Challenge.
 
 
 ## Install + Setup
-- Please see the deployed site [here](https://spacestagram.surge.sh/)
+- Deployed site [here](https://spacestagram.surge.sh/)
 
 To view the code: 
 - Clone down the Repository
